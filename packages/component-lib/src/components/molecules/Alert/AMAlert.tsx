@@ -9,11 +9,14 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog"
+import { AMButton } from "../Button/AMButton"
 
 
 export const AMAlert = () => (
   <AlertDialog>
-    <AlertDialogTrigger>Open</AlertDialogTrigger>
+    <AlertDialogTrigger>
+      <AMButton variant="outline">Show Dialog</AMButton>
+    </AlertDialogTrigger>
     <AlertDialogContent>
       <AlertDialogHeader>
         <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>

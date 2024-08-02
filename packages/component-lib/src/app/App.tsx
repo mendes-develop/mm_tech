@@ -1,4 +1,4 @@
-import { AMAlert } from "./components/molecules/Alert/AMAlert"
+import { AMAlert } from "../components/molecules/Alert/AMAlert"
 
 function App() {
   return (
