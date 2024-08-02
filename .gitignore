@@ -71,3 +71,5 @@ lerna-debug.log*
 # misc
 .DS_Store
 
+
+*storybook.log
