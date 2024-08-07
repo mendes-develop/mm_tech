@@ -1,4 +1,3 @@
-// import { AMButton } from './AMButton';
 import type { Meta, StoryObj } from "@storybook/react";
 import { AMButton } from "./AMButton";
 

@@ -4,8 +4,8 @@
 	"scripts": {
 		"build": "turbo build",
 		"dev": "turbo dev",
-		"lint": "turbo lint",
-		"format": "prettier --write \"**/*.{ts,tsx,md}\""
+		"lint": "pnpm @biomejs/biome lint",
+		"storybook-ui": "cd packages/component-lib && pnpm storybook"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.8.3",
