@@ -1,12 +1,12 @@
-import { AMAlert } from "../components/molecules/Alert/AMAlert"
+import { AMAlert } from "../components/molecules/Alert/AMAlert";
 
 function App() {
-  return (
-    <>
-      <h1>Vite + React</h1>
-      <AMAlert />
-    </>
-  )
+	return (
+		<>
+			<h1>Vite + React</h1>
+			<AMAlert />
+		</>
+	);
 }
 
-export default App
+export default App;

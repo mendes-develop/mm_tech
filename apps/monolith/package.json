@@ -1,15 +1,15 @@
 {
-  "name": "monolith",
-  "scripts": {
-    "dev": "wrangler dev src/index.ts",
-    "deploy": "wrangler deploy --minify src/index.ts"
-  },
-  "dependencies": {
-    "@hono/swagger-ui": "^0.4.0",
-    "hono": "^4.5.3"
-  },
-  "devDependencies": {
-    "@cloudflare/workers-types": "^4.20240529.0",
-    "wrangler": "^3.57.2"
-  }
+	"name": "monolith",
+	"scripts": {
+		"dev": "wrangler dev src/index.ts",
+		"deploy": "wrangler deploy --minify src/index.ts"
+	},
+	"dependencies": {
+		"@hono/swagger-ui": "^0.4.0",
+		"hono": "^4.5.3"
+	},
+	"devDependencies": {
+		"@cloudflare/workers-types": "^4.20240529.0",
+		"wrangler": "^3.57.2"
+	}
 }
