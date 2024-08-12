@@ -47,6 +47,7 @@
 		"date-fns": "^3.6.0",
 		"embla-carousel-react": "^8.1.8",
 		"input-otp": "^1.2.4",
+		"loadsh": "^0.0.4",
 		"lucide-react": "^0.419.0",
 		"next-themes": "^0.3.0",
 		"react": "^18.3.1",
@@ -89,6 +90,8 @@
 		"vite": "^5.3.4"
 	},
 	"eslintConfig": {
-		"extends": ["plugin:storybook/recommended"]
+		"extends": [
+			"plugin:storybook/recommended"
+		]
 	}
 }

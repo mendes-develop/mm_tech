@@ -2,11 +2,30 @@ import * as React from "react";
 
 import { cn } from "@/lib/utils";
 
+const TableTitle = React.forwardRef<
+	HTMLDivElement,
+	React.HTMLAttributes<HTMLDivElement>
+>(({ className, ...props }, ref) => (
+	<div
+		ref={ref}
+		className={cn("flex flex-row justify-between bg-slate-300 p-2", className)}
+		{...props}
+	/>
+));
+
 const Table = React.forwardRef<
 	HTMLTableElement,
 	React.HTMLAttributes<HTMLTableElement>
 >(({ className, ...props }, ref) => (
-	<div className="relative w-full overflow-auto">
+	<div className="relative w-full overflow-auto border rounded-lg">
+		{/* <div className="border flex flex-row justify-between bg-slate-300 p-2">
+			<div>
+				Table Title
+			</div>
+			<div>
+				Table Title
+			</div>
+		</div> */}
 		<table
 			ref={ref}
 			className={cn("w-full caption-bottom text-sm", className)}
@@ -110,6 +129,7 @@ TableCaption.displayName = "TableCaption";
 
 export {
 	Table,
+	TableTitle,
 	TableHeader,
 	TableBody,
 	TableFooter,

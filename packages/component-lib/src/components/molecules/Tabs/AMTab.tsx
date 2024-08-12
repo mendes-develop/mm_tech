@@ -1,3 +1,5 @@
+"use strict"
+
 import {
   Tabs,
   TabsContent,
@@ -5,20 +7,21 @@ import {
   TabsTrigger,
 } from "@/components/ui/tabs"
 
-type AMTabProp = {
-  trigger: string
+type AMTabProp<T extends string> = {
+  trigger: T;
   content: React.ReactNode
 }
 
-type AMTabsProps = {
-  tabs: AMTabProp[],
-  defaultValue?: string
+// and same for the defaultValue
+type AMTabsProps<T extends string> = {
+  tabs: AMTabProp<T>[],
+  defaultValue?: T
 }
 
-export function AMTab({ tabs, defaultValue }: AMTabsProps) {
+export function AMTab<T extends string>({ tabs, defaultValue }: AMTabsProps<T>) {
   return (
-    <Tabs defaultValue={defaultValue || tabs[0]?.trigger} className="w-full">
-      <TabsList className={`grid w-full grid-cols-${tabs.length}`}>
+    <Tabs defaultValue={defaultValue || tabs[0].trigger} className="w-full">
+      <TabsList className={`w-full flex flex-row`}>
         {tabs.map((tab) => (
           <TabsTrigger key={tab.trigger} value={tab.trigger}>{tab.trigger}</TabsTrigger>
         ))}
@@ -31,3 +34,23 @@ export function AMTab({ tabs, defaultValue }: AMTabsProps) {
     </Tabs>
   )
 }
+
+const Example = ({ label }: { label: string }) =>
+  <div>{label}</div>
+
+function labelTransformer(i: number) {
+  return `Tab ${i + 1}` as const;
+}
+
+type AccordionLabel = ReturnType<typeof labelTransformer>
+
+export const tabsText: AMTabProp<AccordionLabel>[] = [
+  {
+    trigger: labelTransformer(1),
+    content: <Example label={labelTransformer(1)} />,
+  },
+  {
+    trigger: labelTransformer(1),
+    content: <Example label={labelTransformer(1)} />,
+  }
+]
