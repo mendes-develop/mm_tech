@@ -12,7 +12,7 @@ type Story = StoryObj<typeof meta>;
 export const BaseTabs: Story = {
   args: {
     tabs: tabsText,
-    defaultValue: "Tab 2"
+    defaultValue: "Tab test"
   },
 };
 

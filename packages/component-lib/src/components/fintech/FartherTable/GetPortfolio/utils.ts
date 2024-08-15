@@ -56,13 +56,11 @@ export const parseToDate = (createdAt: CreatedAt) => {
 
 type PortfolioType =
   "Tax-advantaged" |
-  "Tax-exempt" |
-  "Tax-advantaged-deferred-compensation" |
-  "Tax-exempt-deferred-compensation"
-
+  "Tax-exempt" | "any"
 
 export type PortfolioData = {
   riskLevel: number;
   type: PortfolioType;
   created: CreatedAt;
 }
+

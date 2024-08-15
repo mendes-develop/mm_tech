@@ -55,7 +55,7 @@ type Securities = {
   }
 }
 
-type PortfolioBreakdown = {
+export type PortfolioBreakdown = {
   [key in EquityType]?: {
     category: Category;
     securities: Securities;
